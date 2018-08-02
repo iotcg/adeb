@@ -29,3 +29,7 @@ fi
 #WA for library link issue
 LIBRARY_PATH=${LIBRARY_PATH}:/usr/lib/gcc/x86_64-linux-gnu/7/
 export LIBRARY_PATH=${LIBRARY_PATH}:/usr/lib/x86_64-linux-gnu/
+
+#WA for include path issue
+CPATH=${CPATH}:/usr/include/c++/7
+export CPATH=${CPATH}:/usr/include/x86_64-linux-gnu/c++/7
