@@ -33,3 +33,14 @@ export LIBRARY_PATH=${LIBRARY_PATH}:/usr/lib/x86_64-linux-gnu/
 #WA for include path issue
 CPATH=${CPATH}:/usr/include/c++/7
 export CPATH=${CPATH}:/usr/include/x86_64-linux-gnu/c++/7
+
+
+#WA for kernel include files on x86 device
+export CPATH=${CPATH}:/kernel-headers/include
+cat /proc/cpuinfo | grep -q Intel 2>/dev/null
+rst=$?
+if [ $rst -eq 0 ]
+then
+	CPATH=${CPATH}:/kernel-headers/arch/x86/include/generated
+	export CPATH=${CPATH}:/kernel-headers/arch/x86/include/generated/uapi
+fi
