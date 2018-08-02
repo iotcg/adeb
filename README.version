@@ -1,1 +1,8 @@
 https://github.com/joelagnel/adeb/
+
+Worked:
+bcc: 61f8bfd7
+iotcg adeb: 1d1ecc30
+x86 command
+	1)use kernel-header.sh to generate kernel-headers directory
+	2)adeb prepare --full --build --arch amd64 --bcc --kernelsrc /home/jerry/kernel-headers
