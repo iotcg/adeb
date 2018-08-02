@@ -164,3 +164,8 @@ Common Trouble shooting
 1. Installing g++ with `apt-get install g++` fails.
 
 A. Solution: Run `adeb shell apt-get update` after the `adeb prepare` stage.
+
+2. It's too slow to use debootstrap to create debian fs
+
+   Solution: In China, use local mirror https://mirror.tuna.tsinghua.edu.cn/debian/
+   instead of debian official website http://deb.debian.org/debian/
