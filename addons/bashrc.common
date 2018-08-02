@@ -25,3 +25,7 @@ fi
 if [ $override_vers -eq 1 ]; then
 	export LINUX_VERSION_CODE_OVERRIDE=$this_vers
 fi
+
+#WA for library link issue
+LIBRARY_PATH=${LIBRARY_PATH}:/usr/lib/gcc/x86_64-linux-gnu/7/
+export LIBRARY_PATH=${LIBRARY_PATH}:/usr/lib/x86_64-linux-gnu/
